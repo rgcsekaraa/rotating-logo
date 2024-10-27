@@ -1,0 +1,57 @@
+.coming-soon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.image-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  max-height: 600px;
+  width: 100%;
+  height: auto;
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.background-image {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  max-height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  object-fit: contain;
+  animation: rotate 30s linear infinite;
+  transform-origin: center;
+}
+
+.foreground-image {
+  width: 80%;
+  position: relative;
+  z-index: 2;
+  object-fit: contain;
+}
+
+.coming-soon-text {
+  margin-top: 80px;
+  font-size: 1.5rem;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
